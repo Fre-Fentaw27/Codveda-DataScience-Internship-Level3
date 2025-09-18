@@ -1,0 +1,7 @@
+NEURAL NETWORK PERFORMANCE METRICS
+==================================================
+
+Test Loss:      0.1961
+Test Accuracy:  0.9250
+Test Precision: 0.8507
+Test Recall:    0.5876
