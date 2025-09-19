@@ -123,9 +123,9 @@ Codveda-DataScience-Internship-Level3/
 
 ## Task 3: Neural Networks with TensorFlow/Keras
 
-- **Description**: Build and train neural network for churn prediction
+**Description**: Build and train neural network for churn prediction
 
-- **Objectives Achieved**:
+**Objectives Achieved**:
 
 ✅ Preprocess structured churn prediction data
 
