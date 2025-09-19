@@ -41,7 +41,6 @@ Codveda-DataScience-Internship-Level3/
 │       ├── churn_nn_model.py                    # Neural Network Model
 │       ├── churn_hyperparameter_tuning.py       # Hyperparameter Tuning
 │       ├── churn_evaluation.py                  # Model Evaluation
-│       └── churn_pipeline.py                    # Complete Churn Pipeline
 │
 ├── models/
 │   ├── Task1_TimeSeries/
@@ -56,8 +55,7 @@ Codveda-DataScience-Internship-Level3/
 │   │
 │   └── Task3_NeuralNetworks/
 │       ├── best_churn_model.h5                  # Best Neural Network
-│       ├── model_architecture.png               # Model Architecture
-│       └── training_history/                    # Training History Files
+│       ├── tuned_churn_model.h5
 │
 ├── outputs/
 │   ├── Task1_TimeSeries/
@@ -82,18 +80,15 @@ Codveda-DataScience-Internship-Level3/
 │       ├── churn_distribution.png               # Churn Distribution
 │       ├── correlation_heatmap.png              # Correlation Heatmap
 │       └── model_performance.txt                # Performance Metrics
-│
-├── notebooks/
-│   ├── Task1_TimeSeries/
-│   │   └── time_series_analysis.ipynb           # Time Series Exploration
-│   │
-│   ├── Task2_NLP/
-│   │   ├── nlp_exploration.ipynb                # NLP Data Exploration
-│   │   └── nlp_model_analysis.ipynb             # Model Analysis
-│   │
-│   └── Task3_NeuralNetworks/
-│       └── churn_analysis.ipynb                 # Churn Data Analysis
-│
+│       └──best_model_performance
+│       └──roc_curve.png
+│       └──comprehensive_evaluation.txt
+│       └──hyperparameter_tuning_analysis.png
+│       └──hyperparameter_tuning_results.csv
+│       └──training_history.png
+│       └──prediction_distribution.png
+│       └──precision_recall_curve.png
+│       └──
 ├── requirements.txt                             # Python Dependencies
 ├── .gitignore                                   # Git Ignore File
 └── README.md                                    # Project Documentation
@@ -113,8 +108,6 @@ Codveda-DataScience-Internship-Level3/
 
 ✅ Evaluate models using MAE, RMSE, and MAPE
 
-**Key Results**: Random Forest achieved the best performance with R² = 0.85
-
 ## Task 2: Natural Language Processing (NLP) - Text Classification
 
 **Description**: Classify text data into sentiment categories
@@ -127,8 +120,6 @@ Codveda-DataScience-Internship-Level3/
 ✅ Train classification models (Naive Bayes, Logistic Regression, SVM, Random Forest)
 
 ✅ Evaluate using precision, recall, and F1-score
-
-- **Key Results**: All models achieved >95% accuracy, with Random Forest performing best
 
 ## Task 3: Neural Networks with TensorFlow/Keras
 
@@ -145,8 +136,6 @@ Codveda-DataScience-Internship-Level3/
 ✅ Tune hyperparameters (learning rate, batch size)
 
 ✅ Evaluate using accuracy and loss curves
-
-- **Key Results**: Identified 9 distinct customer segments with unique characteristics
 
 ## 🛠️ Setup & Installation
 
@@ -176,10 +165,9 @@ Codveda-DataScience-Internship-Level3/
 1. Task 1: Time Series Analysis:
 
 ```bash
+cd src/Task1_TimeSeries/
+# run individually:
 python src/Task1_TimeSeries/data_processing.py
-```
-
-```bash
 python src/Task1_TimeSeries/time_series_analysis.ipynb
 ```
 
@@ -188,10 +176,12 @@ python src/Task1_TimeSeries/time_series_analysis.ipynb
 ```bash
 cd src/Task2_NLP/
 # run individually:
+python nlp_exploration.ipynb
 python nlp_data_processing.py
 python nlp_feature_extraction.py
 python nlp_model_training.py
 python nlp_evaluation.py
+python predict_sentiment.py
 ```
 
 3. Task 3: Neural Networks with TensorFlow/Keras:
@@ -201,24 +191,38 @@ cd src/Task3_NeuralNetworks/
 # run individually:
 python churn_data_processing.py
 python churn_nn_model.py
+python churn_hyperparameter_tuning.py
+python churn_evaluation.py
 ```
 
-## Exploring Results
+## 📊 Exploring Results
 
-**Visualizations**: Check results/task\_\*/ for all generated plots
+**Visualizations**: Check outputs/task\_\*/ for all generated plots and analysis visualizations
 
-**Processed Data**: Available in data/processed/
+**Processed Data**: Available in data/processed/ for each task
 
-**Trained Models**: Stored in models/task\_\*/
+**Trained Models**: Stored in models/task\_\*/ including optimized versions
+
+**Evaluation Reports**: Comprehensive performance metrics and classification reports in each task's output folder
+
+## 🔍 Results Overview
+
+**Task 1**: Time series decomposition, forecasting results, and model comparison metrics
+
+**Task 2**: Text classification performance, sentiment analysis results, and feature importance
+
+**Task 3**: Neural network training history, churn prediction metrics, and hyperparameter optimization results
 
 ## 🔧 Technologies Used
 
 **Data Processing**: pandas, numpy
 
-**Visualization**: matplotlib, seaborn, plotly
+**Visualization**: matplotlib, seaborn
 
-**Machine Learning**: scikit-learn, xgboost
+**Time Series**: statsmodels, prophet
 
-**Model Serialization**: joblib
+**NLP**: nltk, scikit-learn
 
-**Notebooks**: Jupyter
+**Neural Networks**: TensorFlow, Keras
+
+**Model Evaluation**: scikit-learn metrics
