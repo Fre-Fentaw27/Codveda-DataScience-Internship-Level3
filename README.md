@@ -4,7 +4,8 @@ Time Series Analysis, Natural Language Processing(NLP)-Text Classification, Neur
 
 ## 📌 Overview
 
-This repository contains my solutions for the Level 2 Data Science Internship tasks, covering three fundamental machine learning areas: Regression, Classification, and Clustering. Each task demonstrates different aspects of data science workflow from data preprocessing to model evaluation.
+This repository contains my solutions for the Level 3 Data Science Internship tasks, covering three fundamental machine learning areas: Time Series Analysis, Natural Language
+Processing (NLP)-Text Classification, and Neural Networks with TensorFlow/Keras. Each task demonstrates different aspects of data science workflow from data preprocessing to model evaluation.
 
 ## 📂 Project Structure
 
